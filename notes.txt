@@ -1,0 +1,43 @@
+Linked Lists
+
+LL are just another way to store data
+
+LL are not contiguous
+    -- the data isn't stored next to each other in memory
+
+Arrays are contiguous
+    -- the ddata is stored next to each other in memory
+
+LL
+    -- made of nodes (each element is a node)
+    -- each node points to the next node
+    -- in doubly-linked lists, they also point to the previous node
+    -- to get to a specific node you must travel through each node to get to the one you want
+
+    -- the first node == the head
+
+    -- the last node == the tail
+
+    -- node == value, pointer
+
+    -- deleting from LL
+        -- change the pointer of the previous node to point to the next node
+        -- the deleted node isn't actually deleted, it's just not pointed to anymore
+        -- higher level languages automatically garbage collect these
+
+    -- accessing the middle of the chain == O(n)
+        -- bc must go through the chain to get to the specific node
+
+    -- adding to the front or the back is generally O(1)
+        -- make sure the last node has a pointer or adding to the end will be O(n)
+
+    -- doubly LL == has 2 pointers, one to next node, one to previous node
+        -- can traverse chain in either direction
+
+    -- singly LL == has 1 pointer to the next node
+
+LL are not built-in
+    -- you have to make them yourselves
+    -- it's a methodology
+
+LL are very weird and complicated

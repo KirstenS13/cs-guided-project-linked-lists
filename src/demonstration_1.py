@@ -28,8 +28,17 @@ class LinkedListNode():
         self.value = value
         self.next  = None
 
+# this is a very tricky problem
 def delete_node(node_to_delete):
     # Your code here
+    # UNDERSTAND
+    # we don't have access to the head or tail, only to the node to delete
+
+    # PLAN
+    # set node_to_delete.value to node_to_delete.next.value
+    node_to_delete.value = node_to_delete.next.value
+    # set node_to_delete.next to node_to_delete.next.next
+    node_to_delete.next = node_to_delete.next.next
 
 
 x = LinkedListNode('X')
@@ -39,4 +48,15 @@ z = LinkedListNode('Z')
 x.next = y
 y.next = z
 
+cur_node = x
+while cur_node:
+    print(cur_node.value)
+    cur_node = cur_node.next
+
+print("-----------")
 delete_node(y)
+
+cur_node = x
+while cur_node:
+    print(cur_node.value)
+    cur_node = cur_node.next
